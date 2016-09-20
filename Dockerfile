@@ -18,7 +18,6 @@ RUN apk add --update --no-cache $PACKAGES
 #app dir
 RUN mkdir -p $APP_PATH
 WORKDIR $APP_PATH
-VOLUME $APP_PATH
 
 ######################################### example rack app
 RUN gem install rack
