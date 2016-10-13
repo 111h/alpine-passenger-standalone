@@ -1,6 +1,6 @@
 FROM ruby:alpine
 
-ARG PACKAGES="build-base linux-headers gcc abuild binutils ca-certificates cmake procps pcre-dev curl-dev openssl-dev libexecinfo-dev git nodejs pkgconf"
+ARG PACKAGES="build-base linux-headers gcc abuild binutils ca-certificates cmake procps pcre-dev curl-dev libexecinfo-dev git nodejs pkgconf"
 ENV APP_PATH /usr/src/app
 
 ENV PATH="/opt/passenger/bin:$PATH"
