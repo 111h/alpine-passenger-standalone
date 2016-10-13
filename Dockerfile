@@ -13,7 +13,7 @@ RUN echo '' > /etc/apk/repositories && \
 		echo 'http://nl.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories 
 
 # default packages
-RUN apk add --update --no-cache $PACKAGES
+RUN apk --no-cache add $PACKAGES
 
 #app dir
 RUN mkdir -p $APP_PATH
