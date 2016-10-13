@@ -9,8 +9,8 @@ RUN mkdir -p /opt/passenger
 COPY passenger /opt/passenger
 
 RUN echo '' > /etc/apk/repositories && \
-		echo 'http://nl.alpinelinux.org/alpine/edge/main/' >> /etc/apk/repositories && \
-		echo 'http://nl.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories 
+		echo 'http://mirror.yandex.ru/mirrors/alpine/edge/main/' >> /etc/apk/repositories && \
+		echo 'http://mirror.yandex.ru/mirrors/alpine/edge/testing/' >> /etc/apk/repositories 
 
 # default packages
 RUN apk --no-cache add $PACKAGES
