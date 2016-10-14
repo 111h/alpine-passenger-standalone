@@ -1,6 +1,6 @@
 FROM ruby:2.3.1-alpine
 
-ARG PACKAGES="nodejs"
+ARG PACKAGES="curl libexecinfo nodejs"
 ENV APP_PATH /usr/src/app
 
 ENV PATH="/opt/passenger/bin:$PATH"
