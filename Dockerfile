@@ -1,16 +1,12 @@
-FROM ruby:alpine
+FROM ruby:2.3.1-alpine
 
-ARG PACKAGES="build-base linux-headers gcc abuild binutils ca-certificates cmake procps pcre-dev curl-dev libressl-dev libexecinfo-dev git nodejs pkgconf"
+ARG PACKAGES="nodejs"
 ENV APP_PATH /usr/src/app
 
 ENV PATH="/opt/passenger/bin:$PATH"
 
 RUN mkdir -p /opt/passenger
 COPY passenger /opt/passenger
-
-RUN echo '' > /etc/apk/repositories && \
-		echo 'http://mirror.yandex.ru/mirrors/alpine/latest-stable/main/' >> /etc/apk/repositories && \
-		echo 'http://mirror.yandex.ru/mirrors/alpine/latest-stable/testing/' >> /etc/apk/repositories 
 
 # default packages
 RUN apk --no-cache add $PACKAGES
