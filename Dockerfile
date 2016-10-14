@@ -1,6 +1,6 @@
 FROM ruby:2.3.1-alpine
 
-ARG PACKAGES="make gcc curl libexecinfo nodejs"
+ARG PACKAGES="make gcc musl-dev curl libexecinfo nodejs"
 ENV APP_PATH /usr/src/app
 
 ENV PATH="/opt/passenger/bin:$PATH"
