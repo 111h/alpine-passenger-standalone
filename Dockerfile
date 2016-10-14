@@ -8,6 +8,8 @@ ENV PATH="/opt/passenger/bin:$PATH"
 RUN mkdir -p /opt/passenger
 COPY passenger /opt/passenger
 
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/main/' >> /etc/apk/repositories
+ 
 # default packages
 RUN apk --no-cache add $PACKAGES
 
